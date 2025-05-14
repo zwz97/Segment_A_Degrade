@@ -1,0 +1,14 @@
+{
+  "pipeline_name": "sam2_eval",
+  "model_hf_id": "facebook/sam2-hiera-large", 
+  "data_path": "data/degradation_map.json", 
+  "image_base_dir": "data/images/",
+  "output_path": "output/sam2_evaluation_results.csv",
+  "bf1_tolerance": 2,
+  "generator_config": {
+    "points_per_side": 32,
+    "pred_iou_thresh": 0.88,
+    "stability_score_thresh": 0.95,
+    "min_mask_region_area": 100 
+  }
+}

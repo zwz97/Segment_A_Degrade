@@ -1,0 +1,36 @@
+# Core Evaluation Dependencies
+opencv-python
+numpy
+pandas
+tqdm # Progress bars
+scikit-image # Used by some metric calculations if added later
+pycocotools # For decoding COCO RLE masks
+
+# SAM2 Dependencies
+# 1. PyTorch & Torchvision (Ensure version >= 2.5.1 and >= 0.20.1 respectively)
+#    Check compatibility with your CUDA version if using GPU
+#    Install following official PyTorch instructions: https://pytorch.org/
+torch>=2.5.1
+torchvision>=0.20.1
+
+# 2. Official sam2 library
+#    MUST be installed separately by cloning the repo and running 'pip install -e .'
+#    See: https://github.com/facebookresearch/sam2?tab=readme-ov-file#installation
+#    (Requirement cannot be listed directly here as it's not on PyPI)
+
+# 3. Hugging Face Hub (Used by sam2 library for model download)
+huggingface_hub
+transformers
+
+# 4. Optional but recommended by sam2 for some features/performance
+accelerate 
+
+# 5. Image Loading
+Pillow # Often preferred by Hugging Face models, though cv2 is also used
+
+# Visualization (optional but recommended)
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Testing
+pytest
